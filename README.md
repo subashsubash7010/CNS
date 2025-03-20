@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/6e65bdcb-4f91-480e-9a01-0737eadeea9b)## EX. NO: 1(A) : IMPLEMENTATION OF CAESAR CIPHER
+## EX. NO: 1(A) : IMPLEMENTATION OF CAESAR CIPHER
  
 
 ## AIM:
