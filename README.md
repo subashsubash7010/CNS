@@ -1,4 +1,4 @@
-## EX. NO: 1(A) : IMPLEMENTATION OF CAESAR CIPHER
+![image](https://github.com/user-attachments/assets/6e65bdcb-4f91-480e-9a01-0737eadeea9b)## EX. NO: 1(A) : IMPLEMENTATION OF CAESAR CIPHER
  
 
 ## AIM:
@@ -27,8 +27,33 @@ becomes C. To change a message back, each letter is replaced by the one three be
 ### STEP-5: Display the cipher text obtained above.
 
 
-PROGRAM :-
+## PROGRAM :-
+```
+def caesar_cipher(text, shift, encrypt=True):
+    def shift_char(char, shift):
+        shift_base = ord('A') if char.isupper() else ord('a')
+        return chr((ord(char) - shift_base + shift) % 26 + shift_base)
+    
+    if not encrypt:
+        shift = -shift  # Reverse the shift for decryption
+    
+    result = "".join(shift_char(char, shift) if char.isalpha() else char for char in text)
+    
+    return result
 
+# Get input from user
+message = input("Enter the message: ")
+shift = int(input("Enter the shift value: "))
 
+encrypted = caesar_cipher(message, shift, encrypt=True)
+decrypted = caesar_cipher(encrypted, shift, encrypt=False)
 
-OUTPUT :-
+print(f"Original: {message}")
+print(f"Encrypted: {encrypted}")
+print(f"Decrypted: {decrypted}")
+```
+
+## OUTPUT :-
+
+![Screenshot 2025-03-20 085638](https://github.com/user-attachments/assets/694b415e-171d-4e93-96ec-7163c1d1ebde)
+
